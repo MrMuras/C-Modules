@@ -82,6 +82,18 @@ bool isFloat(const std::string& str){
 	return true;
 }
 
+bool	isPseudo(const std::string &str)
+{
+	std::string	pseudo[6] = {"inf", "-inf", "inff", "-inff", "nan", "nanf"};
+
+	for (int i = 0; i < 6; i++)
+	{
+		if (str == pseudo[i])
+			return (true);
+	}
+	return (false);
+}
+
 int checkType(const std::string& str) {
 	if (isChar(str)) {
 		return 1;
@@ -153,6 +165,18 @@ void convertFloat(const std::string& str){
 
 }
 
+void	convertPseudo(const std::string &argument)
+{
+	char	*end;
+	float	floatVal = std::atof(argument.c_str());
+	double	doubleVal = strtod(argument.c_str(), &end);
+	
+	std::cout << "Char: Impossible" << std::endl;
+	std::cout << "Integer: Impossible" << std::endl;
+	std::cout << "Float: " << floatVal << 'f' << std::endl;
+	std::cout << "Double: " << doubleVal << std::endl;
+}
+
 
 void ScalarConverter::converter(const std::string& str) {
 	int result = checkType(str);
@@ -171,6 +195,9 @@ void ScalarConverter::converter(const std::string& str) {
 			convertDouble(str);
 			break;
 		case 5:
+			convertPseudo(str);
+			break;
+		default:
 			std::cout << "Not recognized as any type" << std::endl;
 			break;
 	}
