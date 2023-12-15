@@ -4,7 +4,7 @@ bool isChar(const std::string& str) {
 	if (str.length() != 1)
 		return false; 
 	char singleChar = str[0];
-	return !(isdigit(singleChar) || !isprint(singleChar));
+	return (!isdigit(singleChar) || isprint(singleChar));
 }
 
 bool isInt(const std::string& str){
@@ -100,8 +100,8 @@ void convertChar(const std::string& str) {
 	char c = str.c_str()[0];
 	std::cout << "Char: " << c << std::endl;
 	std::cout << "integer: " << static_cast<int>(c) << std::endl;
-	std::cout << "float: " << static_cast<float>(c) << std::endl;
-	std::cout << "double: " << static_cast<double>(c) << std::endl;
+	std::cout << "float: " << static_cast<float>(c) << ".0f" << std::endl;
+	std::cout << "double: " << static_cast<double>(c) << ".0" << std::endl;
 }
 
 void convertint(const std::string& str){
