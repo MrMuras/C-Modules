@@ -103,8 +103,10 @@ int checkType(const std::string& str) {
 		return 3;
 	} else if (isDouble(str)) {
 		return 4;
-	} else {
+	} else if (isPseudo(str)){
 		return 5;
+	} else {
+		return 6;
 	}
 }
 
@@ -132,7 +134,6 @@ void convertint(const std::string& str){
 void convertDouble(const std::string& str){
 	char	*end;
 	double	d = strtod(str.c_str(), &end);
-
 	if (d < 32.0 || d > 126.0)
 		std::cout << "Char: Non Displayable" << std::endl;
 	else
@@ -170,7 +171,7 @@ void	convertPseudo(const std::string &argument)
 	char	*end;
 	float	floatVal = std::atof(argument.c_str());
 	double	doubleVal = strtod(argument.c_str(), &end);
-	
+
 	std::cout << "Char: Impossible" << std::endl;
 	std::cout << "Integer: Impossible" << std::endl;
 	std::cout << "Float: " << floatVal << 'f' << std::endl;
