@@ -17,5 +17,7 @@ int main() {
 	iter(charArray, 5, printElement<char>);
 	std::cout << std::endl;
 
+	
+
 	return 0;
 }
