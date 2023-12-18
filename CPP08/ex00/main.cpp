@@ -17,7 +17,6 @@ int main(int, char**)
 	catch (const std::exception &e){
 		std::cerr << e.what() << std::endl;
 	}
-	
 	try{
 		it = easyfind(numbers, 3);
 	}
