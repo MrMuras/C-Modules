@@ -19,7 +19,7 @@ class MutantStack : public std::stack<T>{
 			return (*this);
 		}
 		~MutantStack() {
-				std::cout << "Default constructor called" << std::endl;
+				std::cout << "Default deconstructor called" << std::endl;
 		};
 		typedef typename std::stack<T>::container_type::iterator iterator;
 		iterator begin(void) {
