@@ -24,11 +24,11 @@ Base	*generate(){
 }
 
 void	identify(Base *p){
-	if(dynamic_cast<A*>(p))
+	if(dynamic_cast<A*>(p) == NULL)
 		std::cout << "It's A!" << std::endl;
-	else if(dynamic_cast<B*>(p))
+	else if(dynamic_cast<B*>(p) == NULL)
 		std::cout << "It's B!" << std::endl;
-	else if(dynamic_cast<C*>(p))
+	else if(dynamic_cast<C*>(p) == NULL)
 		std::cout << "It's C!" << std::endl;
 	else
 		std::cout << "It's not A, B or C!" << std::endl;
