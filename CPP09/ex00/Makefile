@@ -1,9 +1,8 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-
-NAME = Mutant
-SOURCES = main.cpp
-HDRS = MutantStack.hpp
+NAME = Bit
+SOURCES = main.cpp BitcoinExchange.cpp
+HDRS = BitcoinExchange.hpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(NAME)

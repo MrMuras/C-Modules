@@ -4,22 +4,13 @@
 # include <iostream>
 # include <string>
 # include <map>
+# include <fstream>
+# include <stdexcept>
+# include <sstream>
+# include <string>
 
-class BitcoinExchange
-{
-	public:
-		// usless constructors
-		BitcoinExchange();
-		BitcoinExchange(const BitcoinExchange &copy);
-		BitcoinExchange(std::string);
-		~BitcoinExchange();
-		BitcoinExchange & operator=(const BitcoinExchange &assign);
-		// usefull functions
-
-	private:
-		std::map<std::string, float> _dataMap;
-		std::string _input;
-		
-};
+std::map<std::string, float> storedata();
+void	checkline(std::string line);
+void	handleinput(std::string file);
 
 #endif
