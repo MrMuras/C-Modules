@@ -36,7 +36,7 @@ void PmergeMe::sortVec(int start, int end){
 	if (start - end < 10)
 		insertionVec(start, end);
 	else{
-		int middle = (start + end) / 2;
+		int middle = start + (end - start) / 2;
 
 		sortVec(start, middle);
 		sortVec(middle+1, end);

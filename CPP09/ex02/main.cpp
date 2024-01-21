@@ -15,13 +15,13 @@ int main(int argc, char *argv[]) {
 			std::cout << "Sorted: ";
 			Pg.printVector();
 			std::cout<< std::endl;
-			double sorting_time = static_cast<double>(end - start)* 1e6 / CLOCKS_PER_SEC;
+			double sorting_time = static_cast<double>(end - start)* 1000000 / CLOCKS_PER_SEC;
 			std::cout << "Sorting vector took " << sorting_time << " microseconds." << std::endl;
 			
 			clock_t	start1 = clock();
 			Pg.sortDeq();
 			clock_t	end1 = clock();
-			double sorting_time1 = static_cast<double>(end1 - start1)* 1e6 / CLOCKS_PER_SEC;
+			double sorting_time1 = static_cast<double>(end1 - start1)* 1000000 / CLOCKS_PER_SEC;
 			std::cout << "Sorting deque took " << sorting_time1<< " microseconds." << std::endl;
 		}
 		catch(const std::exception& e){
