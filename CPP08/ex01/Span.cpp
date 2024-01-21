@@ -4,22 +4,16 @@
 Span::Span():_N(0){
 	std::cout << "\e[0;33mDefault Constructor called of Span\e[0m" << std::endl;
 }
-
 Span::Span(const Span &copy): _N(copy.getN()){
 	std::cout << "\e[0;33mCopy Constructor called of Span\e[0m" << std::endl;
 }
-
 Span::Span(unsigned int N): _N(N){
 	std::cout << "\e[0;33mFields Constructor called of Span\e[0m" << std::endl;
 }
-
-
 // Destructor
 Span::~Span(){
 	std::cout << "\e[0;31mDestructor called of Span\e[0m" << std::endl;
 }
-
-
 // Operators
 Span & Span::operator=(const Span &assign)
 {
@@ -29,8 +23,6 @@ Span & Span::operator=(const Span &assign)
 	}
 	return *this;
 }
-
-
 // Getters / Setters
 unsigned int Span::getN() const
 {
@@ -40,6 +32,9 @@ void Span::setN(unsigned int N)
 {
 	_N = N;
 }
+
+
+
 void Span::addNumber(int number) {
 	if (_numbers.size() >= _N) {
 		throw(full());

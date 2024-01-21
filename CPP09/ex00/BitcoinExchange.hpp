@@ -9,8 +9,8 @@
 # include <sstream>
 # include <string>
 
-std::map<std::string, float> storedata();
-void	checkline(std::string line);
-void	handleinput(std::string file);
+std::map<int, float> storedata();
+std::pair<int, float>	checkline(std::string line);
+void	handleinput(std::string file, std::map<int, float>);
 
 #endif

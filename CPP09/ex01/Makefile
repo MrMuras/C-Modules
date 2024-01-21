@@ -1,8 +1,8 @@
 CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = btc
-SOURCES = main.cpp BitcoinExchange.cpp
-HDRS = BitcoinExchange.hpp
+NAME = RPN
+SOURCES = main.cpp RPN.cpp
+HDRS = RPN.hpp
 OBJECTS = $(SOURCES:.cpp=.o)
 
 all: $(NAME)
